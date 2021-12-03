@@ -24,13 +24,6 @@ class App extends Component {
 	static getDerivedStateFromProps(props, state){
 		if(props.search!==state.search){
 			/*
-
-				please write your search method inside here
-				it's a little tricky to code within getDerivedStateFromProps
-
-				you cannot define functions inside this method,
-				nor can you call functions from outside of this method
-
 				access state variables or props variables like below:
 				!!---state.search and props.search and state.items---!!
 				
@@ -42,24 +35,6 @@ class App extends Component {
 				})
 				------------------------!!
 
-				user input search string is passed in as a props variable,
-				to access the user input search string, simply use PROPS.SEARCH (lower case of course)
-
-				state.items holds the posts that are currently on display
-
-
-				or simply try and modify the code I've written
-				my code filters out every other post except for the post ,
-				with the specified ID '07d60ddd-f685-472c-89d6-ba42032555d2'
-				you can try to modify it so that it searches through posts
-				and filters out the ones that don't match the user input search string
-
-				NOTE:
-				original code will filters out all posts except the specified one,
-				even if you remove your search string input,
-				it is actually still filtering,
-				so you will not see the posts come back,
-				just refresh if you want to see all the posts
 			*/
 			let filtered = state.items.filter( post => {
 				if(post.item.includes(props.search)||post.description.includes(props.search)){
