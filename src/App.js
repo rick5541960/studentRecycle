@@ -21,10 +21,6 @@ class App extends Component {
 
   handleOnChange(search_string){
     // this is the function that handles the on change event for the search bar
-    // it should take in the user input value and update relavent state
-    // please save the user input value in this.state.search, as it is passed down to child components
-    // the code below doesn't actually work, it just sets the value to something, instead of user input
-
     this.setState({search: search_string});
   }
 
